@@ -1,0 +1,119 @@
+.services-section {
+  padding: 60px 20px;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f3d2b;
+  margin-bottom: 10px;
+}
+
+.services-subtitle {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.service-card {
+  background: #ffffff;
+  padding: 10px; /* smaller padding */
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* push button to bottom */
+}
+
+.service-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon / Logo */
+.service-icon img {
+  width: 120px;  /* bigger logo */
+  height: 60px; /* bigger logo */
+  object-fit: contain;
+  margin: 5px 0 10px; /* reduce vertical spacing */
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon img {
+  transform: scale(1.15);
+}
+
+/* Text */
+.service-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f3d2b;
+  margin-bottom: 10px;
+}
+
+.service-desc {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  flex-grow: 1; /* let description grow if needed */
+}
+
+/* Button */
+.service-btn {
+  padding: 8px 20px;
+  border: none;
+  background-color: #e404e4; 
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto; 
+}
+
+.service-btn:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-icon img {
+    width: 120px; 
+    height: 70px;
+  }
+}

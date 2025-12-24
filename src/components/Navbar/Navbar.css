@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* ---------- Navbar ---------- */
+ .navbar {
+  background: white;
+  padding: 8px 40px 8px 0px; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 5000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.nav-logo {
+  width: 180px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links li {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  cursor: pointer;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.nav-links li:hover {
+  color: #b800ff;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  position: absolute;
+  top:41px;
+  left: 0;
+  background: white;
+  min-width: 270px;
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 6000;
+  list-style: none;
+}
+
+.dropdown-menu li {
+  padding: 12px 15px;
+  font-size: 14px;
+}
+
+.dropdown-menu li:hover {
+  background: #f2f2f2;
+}
+
+.dropdown-menu.show {
+  display: flex;
+}
+
+/* Appointment */
+.appointment {
+  text-align: right;
+  font-size: 14px;
+}
+
+.appointment strong {
+  display: block;
+  font-size: 18px;
+  color: #b800ff;
+}
+
+/* Mobile Icon */
+.mobile-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Profile */
+.profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-icon {
+  color: #222;
+  transition: color 0.3s;
+}
+
+.profile-icon:hover {
+  color: #b800ff;
+}
+
+.profile-menu {
+  position: absolute;
+  top: 50px;
+  right: -36px;
+  background: white;
+  min-width: 220px;
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 6000;
+  list-style: none;
+}
+
+.profile-menu li {
+  padding: 12px 15px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-menu li:hover {
+  background: #f2f2f2;
+}
+
+/* Make Name medium bold */
+.profile-name {
+  font-weight: 500;
+}
+
+.profile-menu.show {
+  display: flex;
+}
+
+
+/* ---------- Responsive ---------- */
+@media (max-width: 992px) {
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    display: none;
+    border-top: 1px solid #ddd;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    padding: 15px 30px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    top: 0;
+    box-shadow: none;
+  }
+
+  .mobile-icon {
+    display: block;
+  }
+
+  .appointment {
+    display: none;
+  }
+  .profile {
+    display: none;
+  }
+}
+

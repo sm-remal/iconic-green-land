@@ -1,0 +1,56 @@
+.vision-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.vision-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.vision-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #111;
+  white-space: nowrap;
+}
+
+.check-icon {
+  color: #b800ff; /* purple check */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.vision-text {
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .vision-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .vision-item {
+    width: 50%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .vision-item {
+    width: 100%;
+  }
+}

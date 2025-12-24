@@ -1,0 +1,136 @@
+.how-it-works {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.how-it-works .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.how-it-works h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.how-it-works .subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* Steps */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.step {
+  background: white;
+  flex: 1 1 250px;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.step .icon {
+  font-size: 36px;
+  color: #b800ff;
+  margin-bottom: 20px;
+}
+
+.step h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.step p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Companies grid */
+.companies-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.companies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.company-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.company-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.company-icon {
+  font-size: 28px;
+  color: #b800ff;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .steps {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .how-it-works h2 {
+    font-size: 28px;
+  }
+
+  .how-it-works .subtitle {
+    font-size: 16px;
+  }
+
+  .step h3 {
+    font-size: 20px;
+  }
+
+  .step p {
+    font-size: 14px;
+  }
+
+  .step .icon {
+    font-size: 28px;
+  }
+
+  .company-card {
+    padding: 15px;
+  }
+
+  .company-icon {
+    font-size: 24px;
+  }
+}
