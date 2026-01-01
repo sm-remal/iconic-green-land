@@ -1,5 +1,5 @@
 import React from "react";
-import "./ServicesOverview.css";
+import "./SisterConcern.css";
 import greenland from "../../assets/logo/greenland .jpg";
 import soft from "../../assets/logo/soft.jpg";
 import hajj from "../../assets/logo/hajj.jpg";
@@ -24,7 +24,7 @@ const servicesData = [
   { id: 10, title: "Iconic Express", icon: express },
 ];
 
-const ServicesOverview = () => {
+const SisterConcern = () => {
   return (
     <section className="services-section">
       <div className="services-container">
@@ -49,4 +49,4 @@ const ServicesOverview = () => {
   );
 };
 
-export default ServicesOverview;
+export default SisterConcern;

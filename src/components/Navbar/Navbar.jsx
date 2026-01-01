@@ -1,25 +1,24 @@
-import React, { useState, useEffect, useRef } from "react";
-import { FaBars, FaTimes, FaUserCircle, FaUser, FaEnvelope, FaCog } from "react-icons/fa";
+import React, { useState, useRef, useEffect } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import "./Navbar.css";
-import unity from "../../assets/logo/unity.png"; 
+import unity from "../../assets/logo/unity.png";
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [servicesDropdown, setServicesDropdown] = useState(false);
-  const [profileDropdown, setProfileDropdown] = useState(false);
-  const dropdownRef = useRef(null);
-  const profileRef = useRef(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  const dropdownRef = useRef(null);
+
+  // Outside click handler
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
         setServicesDropdown(false);
       }
-      if (profileRef.current && !profileRef.current.contains(e.target)) {
-        setProfileDropdown(false);
-      }
     };
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
@@ -41,7 +40,7 @@ const Navbar = () => {
         <li>HOME</li>
         <li>ABOUT</li>
 
-        {/* Services Dropdown */}
+        {/* Sister Concern Dropdown */}
         <li
           className="dropdown"
           ref={dropdownRef}
@@ -64,18 +63,20 @@ const Navbar = () => {
         <li>CONTACT</li>
       </ul>
 
-      {/* Profile Dropdown */}
-      <div className="profile" ref={profileRef}>
-        <FaUserCircle
-          size={32}
-          className="profile-icon"
-          onClick={() => setProfileDropdown(!profileDropdown)}
-        />
-        <ul className={`profile-menu ${profileDropdown ? "show" : ""}`}>
-          <li><FaUser /> <span className="profile-name">John Doe</span></li>
-          <li><FaEnvelope /> john.doe@example.com</li>
-          <li><FaCog /> Settings</li>
-        </ul>
+      {/* Right Side Auth */}
+      <div className="auth-section">
+        {!isLoggedIn ? (
+          <>
+            <button className="login-btn" onClick={() => setIsLoggedIn(true)}>
+              Login
+            </button>
+            <button className="register-btn">Registration</button>
+          </>
+        ) : (
+          <button className="logout-main-btn" onClick={() => setIsLoggedIn(false)}>
+            Logout
+          </button>
+        )}
       </div>
     </nav>
   );

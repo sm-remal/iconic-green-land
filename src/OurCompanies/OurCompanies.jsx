@@ -1,5 +1,5 @@
 import React from "react";
-import "./SisterConcern.css";
+import "./OurCompanies.css";
 
 import greenland from "../assets/logo/greenland .jpg";
 import soft from "../assets/logo/soft.jpg";
@@ -12,7 +12,8 @@ import furniture from "../assets/logo/furniture.jpg";
 import motors from "../assets/logo/motors.jpg";
 import express from "../assets/logo/express.jpg";
 
-const SisterConcern = () => {
+const OurCompanies
+ = () => {
   const logos = [
     greenland,
     soft,
@@ -43,4 +44,5 @@ const SisterConcern = () => {
   );
 };
 
-export default SisterConcern;
+export default OurCompanies
+;

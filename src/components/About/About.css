@@ -1,0 +1,246 @@
+/* ========================
+   Global Styles
+======================== */
+.about-container {
+  padding: 40px 80px;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+/* All heading colors = gray-800 */
+h1, h2, h3, h4, h5, h6 {
+  color: #1f2937;
+}
+
+/* ========================
+   Header
+======================== */
+.about-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-header h1 {
+  font-size: 36px;
+}
+
+.about-header p {
+  max-width: 700px;
+  margin: 10px auto;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ========================
+   Story Section
+======================== */
+.about-story {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+/* Equal width */
+.story-image,
+.story-content {
+  flex: 1;
+}
+
+/* Image */
+.story-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Text */
+.story-content p {
+  color: #444;
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+/* ========================
+   Mission & Vision
+======================== */
+.mission-vision {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.box {
+  flex: 1;
+  background: #eaf4ff;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.box p {
+  color: #444;
+  line-height: 1.6;
+}
+
+/* ========================
+   Core Values
+======================== */
+.core-values {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.values {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.value-card {
+  flex: 1;
+  background: #efe6ff;
+  padding: 30px 20px;
+  border-radius: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.value-card p {
+  color: #444;
+}
+
+/* Icons */
+.value-icon {
+  font-size: 42px;
+  color: #b800ff;
+  margin-bottom: 15px;
+}
+
+/* Animations */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  50% { transform: scale(1.15); }
+}
+
+@keyframes float {
+  50% { transform: translateY(-8px); }
+}
+
+.spin {
+  animation: spin 4s linear infinite;
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ========================
+   Sister Concern (Grid)
+======================== */
+.team {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  margin-top: 35px;
+  align-items: center;
+}
+
+.team-members img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 12px;
+  margin: auto;
+  padding: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-members img:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ========================
+   Achievements
+======================== */
+.achievements {
+  display: flex;
+  gap: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.achievement {
+  flex: 1;
+  background: #ffe6e0;
+  padding: 30px;
+  border-radius: 14px;
+}
+
+.achievement h3 {
+  font-size: 28px;
+}
+
+.achievement p {
+  color: #555;
+}
+
+/* ========================
+   RESPONSIVE
+======================== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .about-container {
+    padding: 30px;
+  }
+
+  .about-story {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mission-vision,
+  .values,
+  .achievements {
+    flex-direction: column;
+  }
+
+  .team-members {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .about-header h1 {
+    font-size: 28px;
+  }
+
+  .team-members {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .value-icon {
+    font-size: 36px;
+  }
+}
